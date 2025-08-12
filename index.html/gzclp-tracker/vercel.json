@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd index.html/gzclp-tracker && npm run build",
+  "outputDirectory": "index.html/gzclp-tracker/.next",
+  "installCommand": "cd index.html/gzclp-tracker && npm install",
+  "framework": "nextjs"
+}

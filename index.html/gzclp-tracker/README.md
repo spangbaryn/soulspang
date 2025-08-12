@@ -70,4 +70,4 @@ On mobile devices:
 - **iOS**: Open in Safari → Share → Add to Home Screen
 - **Android**: Chrome will prompt to install, or use menu → Add to Home Screen
 
-The app works offline once installed!
+The app works offline once installed!!

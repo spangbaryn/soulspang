@@ -1,13 +1,9 @@
 import { AppContainer } from '@/components/app-container'
 import { getOrCreateUser } from '@/lib/user'
 import { prisma } from '@/lib/db'
-import { workouts } from '@/lib/constants'
 
 export default async function HistoryPage() {
   const user = await getOrCreateUser()
-  const currentWorkoutIndex = user.settings?.currentWorkout || 0
-  const workoutKeys = ['A1', 'B1', 'A2', 'B2'] as const
-  const currentWorkout = workouts[workoutKeys[currentWorkoutIndex]]
 
   // Get workout history
   const workoutHistory = await prisma.workout.findMany({
