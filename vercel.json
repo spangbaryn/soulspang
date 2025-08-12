@@ -1,3 +1,6 @@
 {
-  "rootDirectory": "soulspang-main/soulspangnext.html/gzclp-tracker"
+  "buildCommand": "cd soulspang-main/soulspangnext.html/gzclp-tracker && npm install && npm run build",
+  "outputDirectory": "soulspang-main/soulspangnext.html/gzclp-tracker/.next",
+  "installCommand": "cd soulspang-main/soulspangnext.html/gzclp-tracker && npm install",
+  "devCommand": "cd soulspang-main/soulspangnext.html/gzclp-tracker && npm run dev"
 }
