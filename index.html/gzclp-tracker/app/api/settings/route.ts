@@ -25,7 +25,8 @@ export async function POST(request: NextRequest) {
     })
 
     for (const prog of progressions) {
-      const maxWeight = { squatMax, benchMax, deadliftMax, ohpMax }[`${prog.liftType}Max`]
+      const maxWeights: Record<string, number> = { squatMax, benchMax, deadliftMax, ohpMax }
+      const maxWeight = maxWeights[`${prog.liftType}Max`]
       
       if (!prog.t1Weight && maxWeight) {
         await prisma.progression.update({

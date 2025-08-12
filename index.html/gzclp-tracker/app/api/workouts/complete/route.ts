@@ -78,7 +78,8 @@ export async function POST(request: NextRequest) {
             shouldProgress = exercise.sets.every((set: ExerciseSet) => set.completed)
           } else {
             // T2: Progress if minimum volume achieved
-            shouldProgress = totalReps >= stage.minVolume
+            const t2Stage = stage as { sets: number; reps: number; name: string; minVolume: number }
+            shouldProgress = totalReps >= t2Stage.minVolume
           }
           
           if (shouldProgress) {
